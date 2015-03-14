@@ -1,0 +1,6 @@
+ <%= form_for(@referer, remote: true) do |f| %>
+  <div class="ui big fluid action input">
+    <%= f.text_field :url, placeholder: "http://" %>
+    <%= f.button "Shorten URL", class: "ui button blue", type: 'submit' %>
+  </div>
+<% end %>

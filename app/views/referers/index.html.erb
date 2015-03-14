@@ -38,7 +38,7 @@
 					<th>Created On</th>
 					<th>Shorten URL</th>
 					<th class="collapsing">Click</th>
-					<th class="collapsing">Action</th>
+					<th>Action</th>
 				</tr>
 			</thead>
 			<tbody>
@@ -48,8 +48,25 @@
 					<td><%= r.created_at.strftime("%d %B %Y") %><p style="font-size:11px;color:grey;"><%= time_ago_in_words(r.created_at) + " ago" %></p></td>
 					<td><%= r.shorten_url %></td>
 					<td><%= r.click %></td>
-					<td><%= link_to "Visit", r.slug, target: '_blank', class: "mini ui teal button show-popup",  "data-content" => "#{r.shorten_url}" %></td>
+					<td>
+						<%= link_to "Visit", r.slug, target: '_blank', class: "mini ui teal button show-popup",  "data-content" => "#{r.shorten_url}" %>
+						<button id="<%= r.slug %>" data-clipboard-text="<%= r.shorten_url %>" type="button" class="mini ui green button show-popup" data-content="Copy to clipboard"><i class="copy icon"></i></button>
+					</td>
 				</tr>
+
+				<!-- Script for Copy to Clipboard start -->
+				<script type="text/javascript">
+				  var clientText = new ZeroClipboard( $("#<%= r.slug %>"), {
+				    moviePath: "/assets/ZeroClipboard.swf",
+				    debug: false
+					});
+
+					$("#<%= r.slug %>").on("click", function(){
+				    alert("Short URL copied to clipboard");
+				  });
+				</script>
+				<!-- Script for Copy to Clipboard end -->
+
 				<% end %>
 			</tbody>
 		</table>

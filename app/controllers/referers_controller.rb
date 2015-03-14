@@ -1,5 +1,5 @@
 class ReferersController < ApplicationController
-  after_action :expired_fragment, only: [:create]
+  after_action :expired_fragment, only: [:create, :show]
 
   def index
   	@referers = Referer.all

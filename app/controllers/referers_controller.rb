@@ -11,7 +11,7 @@ class ReferersController < ApplicationController
   def create
   	@referer = Referer.new(referer_params)
   	if @referer.save
-  		redirect_to referers_path, notice: "Link has been shorten"
+  		redirect_to referers_path, notice: "Link #{@referer.url} has been shorten to #{@referer.shorten_url}"
   	else
   		render 'new'
   	end

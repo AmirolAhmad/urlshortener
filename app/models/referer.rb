@@ -4,7 +4,8 @@ class Referer < ActiveRecord::Base
 	validates :url, :format => URI::regexp(%w(http https))
 
 	def shorten
-    self.slug = self.id.to_s(12)
+		rand_slug = (0...5).map { ('a'..'z').to_a[rand(26)] }.join
+    self.slug = rand_slug
     self.save
   end
 

@@ -1,11 +1,31 @@
 <h1>Referers#index</h1>
 <p>Find me in app/views/referers/index.html.erb</p>
 
-<% @referers.each do |r| %>
+<table>
+	<caption>table title and/or explanatory text</caption>
+	<thead>
+		<tr>
+			<th>Source URL</th>
+			<th>Click</th>
+			<th>Action</th>
+		</tr>
+	</thead>
+	<tbody>
+		<% @referers.each do |r| %>
+		<tr>
+			<td><%= r.url %></td>
+			<td><%= r.click %></td>
+			<td><%= link_to "Show", r.slug, target: '_blank', class: "" %></td>
+		</tr>
+		<% end %>
+	</tbody>
+</table>
 
-<%= link_to r.shorten_url, r.slug, target: '_blank' %><br/>
 
-<% end %>
+
+
+
+
 
 <p><%= link_to "New", new_referer_path, class: "" %></p>
 

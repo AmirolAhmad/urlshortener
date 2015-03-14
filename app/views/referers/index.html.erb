@@ -1,7 +1,7 @@
 <div class="ui inverted masthead segment">
   <div class="ui page grid">
     <div class="column">
-      <div class="ui inverted blue menu">
+      <div class="ui inverted red menu">
         <%= link_to "URL Shortner", root_url, class: 'header item' %>
       </div>
       <%= image_tag('cat.png', class: 'ui medium image') %>
@@ -29,15 +29,19 @@
 <% cache "referer-index", skip_digest: true do %>
 
 <div class="ui centered page grid">
+	<h3 class="ui horizontal header divider">
+    <i class="list layout icon"></i>
+    List of Shorten URL
+  </h3>
 	<div class="sixteen wide column">
 
-		<table class="ui unstackable table celled striped ">
+		<table class="ui celled table striped">
 			<thead>
 				<tr>
 					<th>Source URL</th>
 					<th>Created On</th>
 					<th>Shorten URL</th>
-					<th class="collapsing">Click</th>
+					<th class="collapsing">Clicks</th>
 					<th>Action</th>
 				</tr>
 			</thead>
@@ -49,8 +53,10 @@
 					<td><%= r.shorten_url %></td>
 					<td><%= r.click %></td>
 					<td>
-						<%= link_to "Visit", r.slug, target: '_blank', class: "mini ui teal button show-popup",  "data-content" => "#{r.shorten_url}" %>
-						<button id="<%= r.slug %>" data-clipboard-text="<%= r.shorten_url %>" type="button" class="mini ui green button show-popup" data-content="Copy to clipboard"><i class="copy icon"></i></button>
+						<div class="ui mini buttons">
+							<%= link_to "Visit", r.slug, target: '_blank', class: "ui blue button show-popup",  "data-content" => "#{r.shorten_url}" %>
+							<button id="<%= r.slug %>" data-clipboard-text="<%= r.shorten_url %>" type="button" class="ui green button show-popup" data-content="Copy to clipboard"><i class="copy icon"></i></button>
+						</div>
 					</td>
 				</tr>
 

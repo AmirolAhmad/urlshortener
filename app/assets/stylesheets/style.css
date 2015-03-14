@@ -1,0 +1,106 @@
+/*--------------
+    Masthead
+---------------*/
+
+#referers .masthead {
+  background-image: url(/assets/bg.jpg);
+  /*margin: 0em;*/
+  padding: 5rem 0rem;
+  margin: 0em 0em 5em 0em;
+}
+#referers .masthead .column {
+  position: relative;
+}
+#referers .masthead .information {
+  margin: 10em 1em 1em 350px;
+}
+#referers .masthead .information p {
+  max-width: 600px;
+}
+#referers .masthead .image {
+  position: absolute;
+  left: 0%;
+  bottom: -110px;
+}
+
+/*--------------
+    Ribbons
+---------------*/
+
+#referers .segment h1 {
+  font-size: 3em;
+  margin-bottom: 1em;
+}
+
+#referers .vertical.segment {
+  padding: 12rem 0rem;
+}
+
+#referers .feature.segment {
+  margin: 0em;
+  padding: 6rem 0rem;
+}
+#referers .feature.segment p {
+  min-height: 50px;
+}
+
+#referers .selection.list {
+  margin: 0em -0.5em;
+}
+
+#referers .logo.row {
+  height: 10rem;
+}
+
+/*--------------
+    Footer
+---------------*/
+
+#referers .footer.segment {
+  background-color: #000000;
+  padding: 3rem 0rem;
+}
+
+
+/*******************************
+          Responsive
+*******************************/
+
+/* Mobile Only */
+@media only screen and (max-width : 768px) {
+
+  #referers h1 {
+    font-size: 1.5em;
+  }
+  #referers .masthead.segment .information {
+    margin-left: 170px;
+  }
+
+  #referers .masthead.segment .image {
+    width: 170px;
+  }
+
+  #referers .masthead.segment .button {
+    font-size: 1rem;
+  }
+
+  #referers .overview .divided.grid .header .icon {
+    font-size: 1.5em;
+  }
+
+  #referers .overview .divided.grid .header + p {
+    min-height: 0px;
+  }
+
+  #referers .masthead.segment .column {
+    font-size: 0.7rem;
+  }
+
+  #referers .masthead.segment .column p {
+    display: none;
+  }
+
+  #referers .selection.list .right.floated {
+    display: none;
+  }
+}

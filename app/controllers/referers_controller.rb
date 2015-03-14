@@ -1,20 +1,24 @@
 class ReferersController < ApplicationController
   def index
   	@referers = Referer.all
-  end
-
-  def new
-  	@referer ||= Referer.new
-  	render
+    @referer ||= Referer.new
   end
 
   def create
   	@referer = Referer.new(referer_params)
-  	if @referer.save
-  		redirect_to referers_path, notice: "Link #{@referer.url} has been shorten to #{@referer.shorten_url}"
-  	else
-  		render 'new'
-  	end
+    
+    respond_to do |format|
+    	if @referer.save
+        flash[:notice] = "Link #{@referer.url} has been shorten to #{@referer.shorten_url}"
+        format.html { redirect_to root_path }
+        format.js { render inline: "location.reload();" }
+    	else
+        flash[:alert] = "URL must start with http:// or https://"
+    		format.html { render 'new' }
+        format.js { render inline: "location.reload();" }
+    	end
+    end
+
   end
 
   def show

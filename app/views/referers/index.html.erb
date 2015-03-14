@@ -1,31 +1,67 @@
-<h1>Referers#index</h1>
-<p>Find me in app/views/referers/index.html.erb</p>
+<div class="ui inverted masthead segment">
+  <div class="ui page grid">
+    <div class="column">
+      <div class="ui inverted blue menu">
+        <%= link_to "URL Shortner", root_url, class: 'header item' %>
+      </div>
+      <%= image_tag('cat.png', class: 'ui medium image') %>
+      <div class="ui hidden transition information">
+        <h1 class="ui inverted header">
+          An Old Cat Can Learn New Tricks
+        </h1>
+        <p>At least he won't reach his highest potential unless you enroll him in Cat University's 2013 class.</p>
 
-<table>
-	<caption>table title and/or explanatory text</caption>
-	<thead>
-		<tr>
-			<th>Source URL</th>
-			<th>Click</th>
-			<th>Action</th>
-		</tr>
-	</thead>
-	<tbody>
-		<% @referers.each do |r| %>
-		<tr>
-			<td><%= r.url %></td>
-			<td><%= r.click %></td>
-			<td><%= link_to "Show", r.slug, target: '_blank', class: "" %></td>
-		</tr>
-		<% end %>
-	</tbody>
-</table>
+        <%= form_for(@referer, remote: true) do |f| %>
+				  <div class="ui big fluid action input">
+				    <%= f.text_field :url, placeholder: "http://" %>
+				    <%= f.button "Shorten It", class: "ui button blue", type: 'submit' %>
+				  </div>
+				<% end %>
 
+				<% if flash[:notice] %>
+					<p style="color:#00b5ad;"><%= flash[:notice] %></p>
+				<% end %>
 
+				<% if flash[:alert] %>
+					<p style="color:#d95c5c;"><%= flash[:alert] %></p>
+				<% end %>
 
+      </div>
+    </div>
+  </div>
+</div>
 
+<div class="ui centered page grid">
+	<div class="sixteen wide column">
 
+		<table class="ui unstackable table celled striped ">
+			<thead>
+				<tr>
+					<th>Source URL</th>
+					<th class="collapsing">Click</th>
+					<th class="collapsing">Action</th>
+				</tr>
+			</thead>
+			<tbody>
+				<% @referers.each do |r| %>
+				<tr>
+					<td><%= r.url %></td>
+					<td><%= r.click %></td>
+					<td><%= link_to "Show", r.slug, target: '_blank', class: "mini ui teal button show-popup",  "data-content" => "#{r.shorten_url}" %></td>
+				</tr>
+				<% end %>
+			</tbody>
+			<tfoot class="full-width">
+		    <tr>
+		      <th colspan="3">
+		        <%= link_to new_referer_path, class: "ui floated small primary labeled icon button" do %>
+		        	<i class="browser icon"></i> Add New
+		        <% end %>
+		      </th>
+		    </tr>
+		  </tfoot>
+		</table>
 
-
-<p><%= link_to "New", new_referer_path, class: "" %></p>
+	</div>
+</div>
 

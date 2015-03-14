@@ -1,6 +1,8 @@
 class Referer < ActiveRecord::Base
 	after_create :shorten
 
+	default_scope -> { order('`referers`.created_at DESC') }
+
 	validates :url, :format => URI::regexp(%w(http https))
 
 	def shorten

@@ -1,5 +1,9 @@
 <%= form_for @referer, :html => {method: :post, class: ""} do |f| %>
 
+<% if @referer.errors.any? %>
+	<p>URL must start with http:// or https://</p>
+<% end %>
+
 <%= f.label :url, "URL", class: "" %>
 <%= f.text_field :url, :class => "" %>
 

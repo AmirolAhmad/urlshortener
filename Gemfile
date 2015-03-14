@@ -25,6 +25,10 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 gem 'rails_config'
 
+group :development do
+	gem 'quiet_assets'
+end
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 

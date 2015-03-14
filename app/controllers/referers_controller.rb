@@ -1,4 +1,6 @@
 class ReferersController < ApplicationController
+  after_action :expired_fragment, only: [:create]
+
   def index
   	@referers = Referer.all
     @referer ||= Referer.new
@@ -37,5 +39,9 @@ class ReferersController < ApplicationController
 
   def referer_params
   	params.require(:referer).permit(:url)
+  end
+
+  def expired_fragment
+    expire_fragment "referer-index"
   end
 end

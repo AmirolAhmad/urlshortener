@@ -1,0 +1,8 @@
+<%= form_for @referer, :html => {method: :post, class: ""} do |f| %>
+
+<%= f.label :url, "URL", class: "" %>
+<%= f.text_field :url, :class => "" %>
+
+<%= f.submit "Shorten Me", class: "" %>
+
+<% end %>

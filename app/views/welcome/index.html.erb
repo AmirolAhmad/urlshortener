@@ -1,0 +1,5 @@
+<% @referers.each do |r| %>
+
+<%= link_to r.shorten_url, r.slug, target: '_blank' %>
+
+<% end %>

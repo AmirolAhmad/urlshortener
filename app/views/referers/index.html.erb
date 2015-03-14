@@ -1,0 +1,11 @@
+<h1>Referers#index</h1>
+<p>Find me in app/views/referers/index.html.erb</p>
+
+<% @referers.each do |r| %>
+
+<%= link_to r.shorten_url, r.slug, target: '_blank' %><br/>
+
+<% end %>
+
+<p><%= link_to "New", new_referer_path, class: "" %></p>
+

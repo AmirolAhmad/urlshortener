@@ -71,7 +71,7 @@
 					<td>
 						<div class="ui mini buttons">
 							<%= link_to "Visit", r.slug, target: '_blank', class: "ui blue button show-popup",  "data-content" => "#{r.shorten_url}" %>
-							<button id="<%= r.slug %>" data-clipboard-target='<%= r.shorten_url %>' data-clipboard-text="<%= r.shorten_url %>" type="button" class="ui green button">Copy</button>
+							<button id="<%= r.slug %>" data-clipboard-text="<%= r.shorten_url %>" type="button" class="ui green button">Copy</button>
 						</div>
 					</td>
 				</tr>

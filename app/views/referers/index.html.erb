@@ -17,8 +17,8 @@
 <div class="ui inverted masthead segment">
   <div class="ui page grid">
     <div class="column">
-      <div class="ui inverted red menu">
-        <%= link_to "URL Shortner", root_url, class: 'header item' %>
+      <div class="ui">
+        <h2><%= link_to "URL Shortener", root_url, class: 'header item huge' %></h2>
       </div>
       <%= image_tag('cat.png', class: 'ui medium image') %>
       <div class="ui hidden transition information">
@@ -71,7 +71,7 @@
 					<td>
 						<div class="ui mini buttons">
 							<%= link_to "Visit", r.slug, target: '_blank', class: "ui blue button show-popup",  "data-content" => "#{r.shorten_url}" %>
-							<button id="<%= r.slug %>" data-clipboard-text="<%= r.shorten_url %>" type="button" class="ui green button show-popup" data-content="Copy to clipboard"><i class="copy icon"></i></button>
+							<button id="<%= r.slug %>" data-clipboard-text="<%= r.shorten_url %>" type="button" class="ui green button">Copy</button>
 						</div>
 					</td>
 				</tr>
@@ -97,3 +97,15 @@
 </div>
 
 <% end %>
+
+<div style="background-color:#564f8a;margin:30px 0;padding: 100px;">
+	<div class="ui center yellow huge aligned header" style="font-size:68px;"><%= total_url_shorten %></div>
+	<div class="ui center large aligned header" style="margin-top:-10px;color:#ffffff;">LINKS SHORTENED WORLDWIDE</div>
+</div>
+
+<h2 class="ui center aligned header">
+  OSEM BRAND TOOLS
+</h2>
+<h4 class="ui center aligned header">
+	Drive efficiency and performance of your strategy and tactics across all marketing technologies.
+</h4>

@@ -12,6 +12,6 @@ class Referer < ActiveRecord::Base
   end
 
   def shorten_url
-		Settings.site_domain.to_s + self.slug
+		Settings.site_domain + self.slug
 	end
 end

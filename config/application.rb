@@ -18,6 +18,8 @@ module Urlshortener
     config.time_zone = 'Asia/Kuala_Lumpur'
     config.encoding = "utf-8"
 
+    config.font_assets.origin = '*'
+
     # The default locale is :en and all translations from config/locales/*.rb,yml are auto loaded.
     # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]
     # config.i18n.default_locale = :de

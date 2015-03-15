@@ -30,6 +30,12 @@ gem 'memcachier'
 
 group :development do
 	gem 'quiet_assets'
+	gem 'capistrano', github: "capistrano/capistrano", require: false
+  gem 'capistrano-rbenv', github: "capistrano/rbenv", require: false
+  gem 'capistrano-bundler', github: "capistrano/bundler", require: false
+  gem 'capistrano-rails', require: false
+  gem 'capistrano-gitflow', git: 'git@github.com:YotpoLtd/capistrano-gitflow.git'
+  gem 'capistrano-faster-assets', '~> 1.0'
 end
 
 # Use ActiveModel has_secure_password

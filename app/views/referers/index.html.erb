@@ -78,9 +78,8 @@
 
 				<!-- Script for Copy to Clipboard start -->
 				<script type="text/javascript">
-				  var clientText = new ZeroClipboard( $("#<%= r.slug %>"), {
-				    moviePath: "/assets/ZeroClipboard.swf",
-				    debug: false
+					$(document).ready(function() {
+					  var clip = new ZeroClipboard($("#<%= r.slug %>"))
 					});
 
 					$("#<%= r.slug %>").on("click", function(){

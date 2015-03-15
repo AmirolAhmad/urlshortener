@@ -4,7 +4,7 @@ lock '3.4.0'
 set :application, 'urlshortener'
 set :repo_url, 'git@github.com:AmirolAhmad/urlshortener.git'
 
-server '128.199.122.17', user: 'deploy', roles: %w{web app db job}
+server '128.199.138.90', user: 'deploy', roles: %w{web app db job}
 
 # Default branch is :master
 # ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp

@@ -13,5 +13,5 @@ Rails.application.config.assets.version = '2.0'
 # Enable the asset pipeline
 Rails.application.config.assets.enabled = true
 
-Rails.application.config.assets.paths << Rails.root.join("app", "assets", "swfs")
+Rails.application.config.assets.paths << Rails.root.join("app", "assets", "fonts", "swfs")
 Rails.application.config.assets.initialize_on_precompile = false

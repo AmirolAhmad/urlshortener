@@ -65,7 +65,7 @@
 				<% @referers.each do |r| %>
 				<tr>
 					<td><%= r.url %></td>
-					<td><%= r.created_at.strftime("%d %B %Y") %><p style="font-size:11px;color:grey;"><%= time_ago_in_words(r.created_at) + " ago" %></p></td>
+					<td><%= r.created_at.strftime("%d %B %Y") %><p style="font-size:11px;color:grey;"><%= time_ago_in_words(r.created_at).to_s + " ago" %></p></td>
 					<td><%= r.shorten_url %></td>
 					<td><%= r.click %></td>
 					<td>

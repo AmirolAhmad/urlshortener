@@ -1,21 +1,4 @@
 GIT
-  remote: git://github.com/capistrano/bundler.git
-  revision: 7089775d5a5757a565195e1a4cfdeca747e987bb
-  specs:
-    capistrano-bundler (1.1.4)
-      capistrano (~> 3.1)
-      sshkit (~> 1.2)
-
-GIT
-  remote: git://github.com/capistrano/capistrano.git
-  revision: e89bc0fd16f185c3cdb3a78838a0f21b5b879576
-  specs:
-    capistrano (3.4.0)
-      i18n
-      rake (>= 10.0.0)
-      sshkit (~> 1.3)
-
-GIT
   remote: git://github.com/capistrano/rbenv.git
   revision: 6f1216cfe0a6b4ac23ca4eaf8acf012e8165d247
   specs:
@@ -76,6 +59,13 @@ GEM
     byebug (4.0.1)
       columnize (= 0.9.0)
       rb-readline (= 0.5.2)
+    capistrano (3.1.0)
+      i18n
+      rake (>= 10.0.0)
+      sshkit (~> 1.3)
+    capistrano-bundler (1.1.4)
+      capistrano (~> 3.1)
+      sshkit (~> 1.2)
     capistrano-faster-assets (1.0.2)
       capistrano (>= 3.1)
     capistrano-rails (1.1.2)
@@ -209,11 +199,11 @@ PLATFORMS
 
 DEPENDENCIES
   byebug
-  capistrano!
-  capistrano-bundler!
+  capistrano (~> 3.1.0)
+  capistrano-bundler (~> 1.1.2)
   capistrano-faster-assets (~> 1.0)
   capistrano-gitflow!
-  capistrano-rails
+  capistrano-rails (~> 1.1.1)
   capistrano-rbenv!
   coffee-rails (~> 4.1.0)
   dalli

@@ -1,3 +1,19 @@
+<% content_for :title do %>
+  URL Shortener
+<% end %>
+<% content_for :meta_tags do %>
+  <%= render :partial => 'application/meta_tags',
+             :locals => {
+                  :type => "website",
+                  :title => "URL Shortener",
+                  :url => request.url,
+                  :description => "URL Shortener",
+                  :canonical => request.url,
+                  :og_title => "URL Shortener",
+                  :og_description => "URL Shortener"
+             } %>
+<% end %>
+
 <div class="ui inverted masthead segment">
   <div class="ui page grid">
     <div class="column">

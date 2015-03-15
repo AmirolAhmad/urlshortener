@@ -25,8 +25,11 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 gem 'rails_config'
 gem 'jquery-turbolinks'
-gem 'memcachier'
-gem 'dalli'
+
+group :production do
+  gem 'memcachier'
+  gem 'dalli'
+end
 
 group :development do
 	gem 'quiet_assets'

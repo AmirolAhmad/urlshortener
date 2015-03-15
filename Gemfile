@@ -25,6 +25,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 gem 'rails_config'
 gem 'jquery-turbolinks'
+gem 'newrelic_rpm'
 
 group :production do
   gem 'memcachier'

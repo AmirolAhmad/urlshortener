@@ -15,5 +15,5 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require semantic
-//= require ZeroClipboard
+//= require zeroclipboard
 //= require_tree .

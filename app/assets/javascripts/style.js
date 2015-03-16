@@ -12,6 +12,10 @@ ready = function() {
     .transition('scale in', 1000)
   ;
 
+  $('.message .close').on('click', function() {
+	  $(this).closest('.message').fadeOut();
+	});
+
 };
 
 $(document).ready(ready);

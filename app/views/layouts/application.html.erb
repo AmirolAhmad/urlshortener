@@ -19,9 +19,15 @@
 <body id="<%= body_class %>">
 
   <% if alert %>
-    <%= alert %>
+    <div class="ui red message nomar">
+      <i class="close icon"></i>
+      <%= alert %>
+    </div>
   <% elsif notice %>
-    <%= notice %>
+    <div class="ui blue message nomar">
+      <i class="close icon"></i>
+      <%= notice %>
+    </div>
   <% end %>
 
 	<%= yield %>

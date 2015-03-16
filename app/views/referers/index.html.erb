@@ -17,9 +17,13 @@
 <div class="ui inverted masthead segment">
   <div class="ui page grid">
     <div class="column">
-      <div class="ui">
-        <h2><%= link_to "URL Shortener", root_url, class: 'header item huge' %></h2>
-      </div>
+      <div class="ui secondary menu">
+      	<div class="header item"><h2><%= link_to "OSEM URL Shortener", root_url %></h2></div>
+			  <div class="right menu">
+			    <%= link_to "SIGN IN", login_path, class: "ui blue inverted mini button" %>
+			    <%= link_to "CREATE NEW ACCOUNT", register_path, class: "ui red inverted mini button" %>
+			  </div>
+			</div>
       <%= image_tag('cat.png', class: 'ui medium image') %>
       <div class="ui hidden transition information">
         <h1 class="ui inverted header">

@@ -18,6 +18,12 @@
 </head>
 <body id="<%= body_class %>">
 
+  <% if alert %>
+    <%= alert %>
+  <% elsif notice %>
+    <%= notice %>
+  <% end %>
+
 	<%= yield %>
 
 	<%= render partial: "footer" %>

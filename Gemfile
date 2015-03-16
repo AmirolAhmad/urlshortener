@@ -27,6 +27,7 @@ gem 'rails_config'
 gem 'jquery-turbolinks'
 gem 'newrelic_rpm'
 gem 'zeroclipboard-rails'
+gem 'devise'
 
 group :production do
   gem 'memcachier'
@@ -34,6 +35,7 @@ group :production do
 end
 
 group :development do
+  gem 'letter_opener'
 	gem 'quiet_assets'
 	gem 'capistrano', '~> 3.1.0'
   gem 'capistrano-rbenv', github: "capistrano/rbenv"

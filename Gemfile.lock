@@ -14,6 +14,13 @@ GIT
       capistrano
       stringex
 
+GIT
+  remote: https://github.com/getsentry/raven-ruby.git
+  revision: 8e6f8dbbc64e7ce4a046fa7aeb6a261f155a24ea
+  specs:
+    sentry-raven (0.12.3)
+      faraday (>= 0.7.6)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -93,6 +100,8 @@ GEM
       warden (~> 1.2.3)
     erubis (2.7.0)
     execjs (2.4.0)
+    faraday (0.9.1)
+      multipart-post (>= 1.2, < 3)
     globalid (0.3.3)
       activesupport (>= 4.1.0)
     hike (1.2.3)
@@ -122,6 +131,7 @@ GEM
     mini_portile (0.6.2)
     minitest (5.5.1)
     multi_json (1.11.0)
+    multipart-post (2.0.0)
     mysql2 (0.3.18)
     net-scp (1.2.1)
       net-ssh (>= 2.6.5)
@@ -241,6 +251,7 @@ DEPENDENCIES
   rails_config
   sass-rails (~> 5.0)
   sdoc (~> 0.4.0)
+  sentry-raven!
   spring
   therubyracer
   turbolinks

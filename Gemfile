@@ -28,6 +28,7 @@ gem 'jquery-turbolinks'
 gem 'newrelic_rpm'
 gem 'zeroclipboard-rails'
 gem 'devise'
+gem "sentry-raven", :git => "https://github.com/getsentry/raven-ruby.git"
 
 group :production do
   gem 'memcachier'
